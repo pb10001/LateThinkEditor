@@ -105,13 +105,13 @@ namespace LateThinkEditor
             {
                 NewPuzzle.ContentAnalysis.Clear();
                 NewPuzzle.ContentAnalysis.AddRange(list);
-                webBrowser1.DocumentText = "<style>.text{cursor:pointer;}.text:hover{color:red;}</style>" + string.Join("", NewPuzzle.ContentAnalysis);
+                webBrowser1.DocumentText = "<style>a{cursor:pointer;}a:hover{color:red;}</style>" + string.Join("", NewPuzzle.ContentAnalysis);
             }
             else
             {
                 NewPuzzle.SolutionAnalysis.Clear();
                 NewPuzzle.SolutionAnalysis.AddRange(list);
-                webBrowser2.DocumentText = "<style>.text{cursor:pointer;}.text:hover{color:red;}</style>" + string.Join("", NewPuzzle.SolutionAnalysis);
+                webBrowser2.DocumentText = "<style>a{cursor:pointer;}a:hover{color:red;}</style>" + string.Join("", NewPuzzle.SolutionAnalysis);
             }
         }
 

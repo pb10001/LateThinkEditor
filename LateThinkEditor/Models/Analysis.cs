@@ -73,11 +73,11 @@ namespace LateThinkEditor
             }
             if (tooltip =="")
             {
-                return string.Format("<div class='text' title='{0}'>{1}</div><br>\n", tooltip, Text);
+                return string.Format("<a title='{0}'>{1}</a><br>\n", tooltip, Text);
             }
             else
             {
-                return string.Format("<div style='{0}' class='text' title='{1}'>{2}</div><br>\n","color:#F00;", tooltip, Text);
+                return string.Format("<a style='{0}' title='{1}'>{2}</a><br>\n","color:#F00;", tooltip, Text);
             }
         }
     }
