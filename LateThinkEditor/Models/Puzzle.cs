@@ -71,6 +71,9 @@ namespace LateThinkEditor
         /// 解説
         /// </summary>
         public string Solution { get; set; } = "";
+        /// <summary>
+        /// 解説の分析
+        /// </summary>
         public List<Analysis> SolutionAnalysis { get; set; } = new List<Analysis>();
         /// <summary>
         /// JSON文字列化

@@ -105,15 +105,24 @@ namespace LateThinkEditor
             {
                 NewPuzzle.ContentAnalysis.Clear();
                 NewPuzzle.ContentAnalysis.AddRange(list);
-                webBrowser1.DocumentText = string.Join("", NewPuzzle.ContentAnalysis);
+                webBrowser1.DocumentText = "<style>.text{cursor:pointer;}.text:hover{color:red;}</style>" + string.Join("", NewPuzzle.ContentAnalysis);
             }
             else
             {
                 NewPuzzle.SolutionAnalysis.Clear();
                 NewPuzzle.SolutionAnalysis.AddRange(list);
-                webBrowser2.DocumentText = string.Join("", NewPuzzle.SolutionAnalysis);
+                webBrowser2.DocumentText = "<style>.text{cursor:pointer;}.text:hover{color:red;}</style>" + string.Join("", NewPuzzle.SolutionAnalysis);
             }
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(string.Join("\n", NewPuzzle.ContentAnalysis.Select(x=>x.Text)));
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(string.Join("\n", NewPuzzle.SolutionAnalysis.Select(x => x.Text)));
+        }
     }
 }

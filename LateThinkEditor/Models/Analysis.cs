@@ -71,7 +71,14 @@ namespace LateThinkEditor
             {
                 tooltip += string.Format("謎: {0}\n", Mystery);
             }
-            return string.Format("<button style='text-align:left; border:0; background:transparent;' title='{0}'>{1}</button><br>\n", tooltip,Text);
+            if (tooltip =="")
+            {
+                return string.Format("<div class='text' title='{0}'>{1}</div><br>\n", tooltip, Text);
+            }
+            else
+            {
+                return string.Format("<div style='{0}' class='text' title='{1}'>{2}</div><br>\n","color:#F00;", tooltip, Text);
+            }
         }
     }
 }
