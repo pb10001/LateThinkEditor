@@ -17,7 +17,6 @@ namespace LateThinkEditor
         /// </summary>
         public Puzzle()
         {
-
         }
         /// <summary>
         /// コピーコンストラクタ
@@ -29,6 +28,8 @@ namespace LateThinkEditor
             Title = source.Title;
             Content = source.Content;
             Solution = source.Solution;
+            ContentAnalysis.AddRange(source.ContentAnalysis);
+            SolutionAnalysis.AddRange(source.SolutionAnalysis);
         }
         /// <summary>
         /// JSONから生成するstatic factory method
@@ -63,9 +64,14 @@ namespace LateThinkEditor
         /// </summary>
         public string Content { get; set; } = "";
         /// <summary>
+        /// 問題文の分析
+        /// </summary>
+        public List<Analysis> ContentAnalysis { get; set; } = new List<Analysis>();
+        /// <summary>
         /// 解説
         /// </summary>
         public string Solution { get; set; } = "";
+        public List<Analysis> SolutionAnalysis { get; set; } = new List<Analysis>();
         /// <summary>
         /// JSON文字列化
         /// </summary>

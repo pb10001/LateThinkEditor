@@ -56,7 +56,7 @@ namespace LateThinkEditor
                 MessageBox.Show("同じタイトルの問題が既に存在します。");
                 return;
             }
-            var puzzle = new Analysis()
+            var puzzle = new Puzzle()
             {
                 Title = textBox1.Text
             };
