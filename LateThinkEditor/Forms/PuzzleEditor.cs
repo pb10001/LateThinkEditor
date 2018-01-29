@@ -23,17 +23,17 @@ namespace LateThinkEditor
         public PuzzleEditor(Puzzle p)
         {
             InitializeComponent();
-            prevPuzzle = p;
-            NewPuzzle = new Puzzle(p);
-            Text = NewPuzzle.Title;
             richTextBox1.TextChanged += RichTextBox_TextChanged;
             richTextBox2.TextChanged += RichTextBox_TextChanged;
+            Font = new Font(Properties.Settings.Default.FontStyle, Properties.Settings.Default.FontSize);
+            /*richTextBox1.Text = NewPuzzle.Content;
+            richTextBox2.Text = NewPuzzle.Solution;*/
+            prevPuzzle = p;
+            NewPuzzle = new Puzzle(p);
             textBox1.DataBindings.Add("Text", NewPuzzle, "Title");
             richTextBox1.DataBindings.Add("Text", NewPuzzle, "Content");
             richTextBox2.DataBindings.Add("Text", NewPuzzle, "Solution");
-            Font = new Font(Properties.Settings.Default.FontStyle, Properties.Settings.Default.FontSize);
-            richTextBox1.Text = NewPuzzle.Content;
-            richTextBox2.Text = NewPuzzle.Solution;
+            Text = NewPuzzle.Title;
         }
 
         Puzzle prevPuzzle;
@@ -101,18 +101,10 @@ namespace LateThinkEditor
             }
             var list = stack.ToList();
             list.Reverse();
-            if (box.Name == "richTextBox1")
-            {
-                NewPuzzle.ContentAnalysis.Clear();
-                NewPuzzle.ContentAnalysis.AddRange(list);
-                webBrowser1.DocumentText = "<style>a{cursor:pointer;}a:hover{color:red;}</style>" + string.Join("", NewPuzzle.ContentAnalysis);
-            }
-            else
-            {
-                NewPuzzle.SolutionAnalysis.Clear();
-                NewPuzzle.SolutionAnalysis.AddRange(list);
-                webBrowser2.DocumentText = "<style>a{cursor:pointer;}a:hover{color:red;}</style>" + string.Join("", NewPuzzle.SolutionAnalysis);
-            }
+            NewPuzzle.ContentAnalysis.Clear();
+            NewPuzzle.ContentAnalysis.AddRange(list);
+            webBrowser1.DocumentText = "<style>a{cursor:pointer;}a:hover{color:red;}</style>" + string.Join("", NewPuzzle.ContentAnalysis);
+            webBrowser2.DocumentText = "<style>a{cursor:pointer;}a:hover{color:red;}</style>" + string.Join("", NewPuzzle.SolutionAnalysis);
         }
 
         private void button3_Click(object sender, EventArgs e)
