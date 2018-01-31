@@ -179,5 +179,10 @@ namespace LateThinkEditor
                 SaveFile(filePath);
             }
         }
+
+        private void バージョン情報AToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new VersionInfo().ShowDialog();
+        }
     }
 }

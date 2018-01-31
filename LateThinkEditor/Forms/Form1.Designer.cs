@@ -41,10 +41,6 @@
             this.ツールTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.オプションOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ヘルプHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.内容CToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.インデックスIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.検索SToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.バージョン情報AToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -154,43 +150,17 @@
             // ヘルプHToolStripMenuItem
             // 
             this.ヘルプHToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.内容CToolStripMenuItem,
-            this.インデックスIToolStripMenuItem,
-            this.検索SToolStripMenuItem,
-            this.toolStripSeparator5,
             this.バージョン情報AToolStripMenuItem});
             this.ヘルプHToolStripMenuItem.Name = "ヘルプHToolStripMenuItem";
             this.ヘルプHToolStripMenuItem.Size = new System.Drawing.Size(75, 22);
             this.ヘルプHToolStripMenuItem.Text = "ヘルプ(&H)";
-            // 
-            // 内容CToolStripMenuItem
-            // 
-            this.内容CToolStripMenuItem.Name = "内容CToolStripMenuItem";
-            this.内容CToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.内容CToolStripMenuItem.Text = "内容(&C)";
-            // 
-            // インデックスIToolStripMenuItem
-            // 
-            this.インデックスIToolStripMenuItem.Name = "インデックスIToolStripMenuItem";
-            this.インデックスIToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.インデックスIToolStripMenuItem.Text = "インデックス(&I)";
-            // 
-            // 検索SToolStripMenuItem
-            // 
-            this.検索SToolStripMenuItem.Name = "検索SToolStripMenuItem";
-            this.検索SToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.検索SToolStripMenuItem.Text = "検索(&S)";
-            // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(187, 6);
             // 
             // バージョン情報AToolStripMenuItem
             // 
             this.バージョン情報AToolStripMenuItem.Name = "バージョン情報AToolStripMenuItem";
             this.バージョン情報AToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
             this.バージョン情報AToolStripMenuItem.Text = "バージョン情報(&A)...";
+            this.バージョン情報AToolStripMenuItem.Click += new System.EventHandler(this.バージョン情報AToolStripMenuItem_Click);
             // 
             // listBox1
             // 
@@ -292,10 +262,6 @@
         private System.Windows.Forms.ToolStripMenuItem ツールTToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem オプションOToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ヘルプHToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 内容CToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem インデックスIToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 検索SToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripMenuItem バージョン情報AToolStripMenuItem;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button button1;
