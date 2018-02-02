@@ -70,19 +70,19 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Location = new System.Drawing.Point(119, 77);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(23, 12);
+            this.linkLabel1.Size = new System.Drawing.Size(233, 12);
             this.linkLabel1.TabIndex = 3;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "link";
+            this.linkLabel1.Text = "https://github.com/pb10001/LateThinkEditor";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(118, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(32, 12);
+            this.label4.Size = new System.Drawing.Size(121, 12);
             this.label4.TabIndex = 4;
-            this.label4.Text = "name";
+            this.label4.Text = "Lateral Thinking Editor";
             // 
             // label5
             // 
@@ -98,24 +98,24 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(118, 29);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(32, 12);
+            this.label6.Size = new System.Drawing.Size(25, 12);
             this.label6.TabIndex = 6;
-            this.label6.Text = "name";
+            this.label6.Text = "v1.0";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(118, 53);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(32, 12);
+            this.label7.Size = new System.Drawing.Size(47, 12);
             this.label7.TabIndex = 7;
-            this.label7.Text = "name";
+            this.label7.Text = "pb10001";
             // 
             // VersionInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(311, 142);
+            this.ClientSize = new System.Drawing.Size(419, 142);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
